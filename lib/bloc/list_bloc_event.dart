@@ -1,4 +1,15 @@
-part of 'list_bloc_bloc.dart';
+import 'package:equatable/equatable.dart';
 
-@immutable
-sealed class ListBlocEvent {}
+abstract class TodoEvent extends Equatable {
+  const TodoEvent();
+}
+
+class AddtodoEvent extends TodoEvent {
+  @override
+  List<Object?> get props => [];
+}
+
+class RemovetodoEvent extends TodoEvent {
+  @override
+  List<Object?> get props => [];
+}

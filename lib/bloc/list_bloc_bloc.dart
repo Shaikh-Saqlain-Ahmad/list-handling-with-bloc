@@ -1,13 +1,9 @@
+import 'dart:html';
+
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+import 'package:list_with_bloc/bloc/list_bloc_event.dart';
+import 'package:list_with_bloc/bloc/list_bloc_state.dart';
 
-part 'list_bloc_event.dart';
-part 'list_bloc_state.dart';
-
-class ListBlocBloc extends Bloc<ListBlocEvent, ListBlocState> {
-  ListBlocBloc() : super(ListBlocInitial()) {
-    on<ListBlocEvent>((event, emit) {
-      // TODO: implement event handler
-    });
-  }
+class TodoBloc extends Bloc<TodoEvent, TodoState> {
+  TodoBloc() : super(const TodoState());
 }

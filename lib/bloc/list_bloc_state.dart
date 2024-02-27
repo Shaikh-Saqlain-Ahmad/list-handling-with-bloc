@@ -1,6 +1,9 @@
-part of 'list_bloc_bloc.dart';
+import 'package:equatable/equatable.dart';
 
-@immutable
-sealed class ListBlocState {}
+class TodoState extends Equatable {
+  final List<String> todosList;
+  const TodoState({this.todosList = const []});
 
-final class ListBlocInitial extends ListBlocState {}
+  @override
+  List<Object?> get props => [todosList];
+}

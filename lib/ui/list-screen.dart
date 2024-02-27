@@ -10,6 +10,23 @@ class ListScreen extends StatefulWidget {
 class _ListScreenState extends State<ListScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(title: const Text("Todo List")),
+      body: ListView.builder(
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(index.toString()),
+            trailing: IconButton(
+              icon: const Icon(Icons.delete_outline_rounded),
+              onPressed: () {},
+            ),
+          );
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+      ),
+    );
   }
 }
